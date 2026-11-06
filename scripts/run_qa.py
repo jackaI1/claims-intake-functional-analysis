@@ -27,8 +27,10 @@ class TracedResult(unittest.TextTestResult):
                               "requirements": list(getattr(getattr(test, test._testMethodName), "requirements", ()))})
 
     def fail(self, test):
+        # unittest passes a _SubTest object for a skipped subcase.
+        parent = getattr(test, "test_case", test)
         for row in self.outcomes:
-            if row["test"] == test.id():
+            if row["test"] == parent.id():
                 row["status"] = "FAIL"
 
     def addFailure(self, test, err):
