@@ -8,7 +8,8 @@ permissions:
   contents: read
 jobs:
   requirements:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
     strategy:
       matrix:
         python: ['3.9', '3.13']
