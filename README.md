@@ -1,17 +1,16 @@
-I built a claim intake checker because I wanted to test whether my written process could catch missing and conflicting details before someone starts reviewing a claim.
+I merged this into my existing [small-business-backoffice project](https://github.com/jackaI1/small-business-backoffice/tree/main/projects/claims-intake-functional-analysis). The current code is in `projects/claims-intake-functional-analysis/` there. I kept the code here so older links still work.
 
-It takes fictional home insurance claims, checks them against a small set of rules and puts anything incomplete or inconsistent in a queue for a person. A complete claim goes to an adjuster for the next step. It never approves coverage or payment. All sample claims, policies and business estimates are invented.
+The move keeps the original layout, including `tests/__init__.py`, `tests/test_intake.py`, `tests/test_qa.py`, `scripts/run_qa.py`. I replaced the README with the report below and left out Git history, installed dependencies, caches and generated build output from the hub copy.
 
-To try it, use Python 3.9 or later. There is nothing to install. From this folder, run:
+The project checks are configured in the hub at `.github/workflows/claims-intake-functional-analysis-qa.yml`, with commands run from this project folder and changes filtered to its paths.
 
-```sh
-python3 -m claims_intake --db demo.sqlite seed samples/policies.json
-python3 -m claims_intake --db demo.sqlite submit samples/claims.json --as-of 2026-01-15
-python3 -m claims_intake --db demo.sqlite queue
-python3 -m claims_intake --db demo.sqlite summary
-```
+Other specific omissions: reports/ (generated output).
 
-On a fresh database, the 12 sample claims produce 2 ready records and 10 needing review. Each flagged record shows what needs attention. Repeating the same submission returns the original records without creating copies. Use sample data only; I have not built the privacy and access controls needed for real claims.
+---
+
+# claims-intake-functional-analysis
+
+I built a claim intake checker to learn how the underlying idea works. This is a learning project.
 
 ## What I wanted to decide
 
@@ -39,16 +38,12 @@ To try my own synthetic examples, I copy [samples/claims.json](samples/claims.js
 
 The command line reads a JSON file, a plain text format for structured records. [core.py](claims_intake/core.py) checks the rules and stores results in SQLite, a database held in one local file. Each new submission stores its original contents, reasons and an audit event. A batch either saves completely or saves nothing. Exact retries return the original decision, while a changed submission under an existing reference or a possible repeated loss goes to review.
 
-The queue is for pending work; the summary also counts records already reviewed. Policy snapshots stay fixed so a retry cannot quietly change the context of an earlier decision. The prototype scans existing records for duplicates and has no web service or customer login. I would need a representative pilot, policy integration, privacy controls and performance testing before using it beyond local synthetic data.
+## Tests and limits
 
-## Checks and reports
+There are 3 test source files in this copy. That source count does not establish an execution result. This is a source snapshot, and running it on a new machine may need environment-specific setup.
 
-```sh
-python3 scripts/run_qa.py
-python3 -m unittest discover -v
-python3 -m claims_intake.options
-```
 
-The [QA plan](docs/qa-test-plan.md) traces tests to every requirement. The runner executes all tests and regenerates [the requirement report](reports/qa.md), [sample results](reports/sample-run.json) and [option estimates](reports/options.json). A requirement fails if any linked test fails, is skipped or has no executed coverage. The option model is in [options.py](claims_intake/options.py) so I can change the volume or review-rate assumptions and recalculate.
 
-GitHub Actions runs the same checks on Python 3.9 and 3.13, compares the generated reports with the committed copies and saves the reports with each run. The current suite has 22 test methods, including boundary and invalid-input subcases, and covers all 15 requirements. It checks real database persistence, rollback after a storage failure, duplicate handling, human actions and the command line. No external service is needed.
+Generated output omitted: reports/ (generated output).
+
+Retained project workflows: `claims-intake-functional-analysis-qa.yml`. Their commands use this folder and their triggers use its paths.
