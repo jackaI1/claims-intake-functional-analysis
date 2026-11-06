@@ -1,0 +1,112 @@
+{
+  "fictional": true,
+  "as_of": "2026-01-15",
+  "summary": {
+    "total": 12,
+    "ready_for_adjuster": 2,
+    "flagged": 10,
+    "awaiting_review": 10,
+    "reviewed": 0
+  },
+  "claims": [
+    {
+      "id": 1,
+      "claim_ref": "DEMO-C01",
+      "status": "READY_FOR_ADJUSTER",
+      "reasons": []
+    },
+    {
+      "id": 2,
+      "claim_ref": "DEMO-C02",
+      "status": "READY_FOR_ADJUSTER",
+      "reasons": []
+    },
+    {
+      "id": 3,
+      "claim_ref": "DEMO-C03",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "MISSING:description",
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 4,
+      "claim_ref": "DEMO-C04",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "EVIDENCE_REQUIRED:photos",
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 5,
+      "claim_ref": "DEMO-C05",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "UNKNOWN_POLICY"
+      ]
+    },
+    {
+      "id": 6,
+      "claim_ref": "DEMO-C06",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "POSSIBLE_DUPLICATE",
+        "PROPERTY_MISMATCH"
+      ]
+    },
+    {
+      "id": 7,
+      "claim_ref": "DEMO-C07",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "LOSS_OUTSIDE_POLICY"
+      ]
+    },
+    {
+      "id": 8,
+      "claim_ref": "DEMO-C08",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "LOSS_AFTER_REPORT",
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 9,
+      "claim_ref": "DEMO-C09",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "FUTURE_DATE",
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 10,
+      "claim_ref": "DEMO-C10",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "HIGH_VALUE",
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 11,
+      "claim_ref": "DEMO-C11",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "POSSIBLE_DUPLICATE"
+      ]
+    },
+    {
+      "id": 12,
+      "claim_ref": "DEMO-C01",
+      "status": "NEEDS_REVIEW",
+      "reasons": [
+        "POSSIBLE_DUPLICATE",
+        "REFERENCE_CONFLICT"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "base": {
+    "fictional_planning_assumptions": {
+      "monthly_claims": 1000,
+      "review_share": 0.3,
+      "handling_cad_per_hour": 45,
+      "build_maintenance_cad_per_hour": 60,
+      "hours_per_worker_month": 160
+    },
+    "options": [
+      {
+        "option": "Manual checklist",
+        "minutes_per_claim": 12,
+        "monthly_handling_hours": 200.0,
+        "claims_per_160h": 800,
+        "setup_cad": 0,
+        "annual_running_cad": 108000.0,
+        "first_year_cad": 108000.0
+      },
+      {
+        "option": "Shared spreadsheet",
+        "minutes_per_claim": 8,
+        "monthly_handling_hours": 133.33,
+        "claims_per_160h": 1200,
+        "setup_cad": 2400,
+        "annual_running_cad": 73560.0,
+        "first_year_cad": 75960.0
+      },
+      {
+        "option": "Rules-assisted intake",
+        "minutes_per_claim": 5.7,
+        "monthly_handling_hours": 95.0,
+        "claims_per_160h": 1684,
+        "setup_cad": 7200,
+        "annual_running_cad": 54480.0,
+        "first_year_cad": 61680.0
+      }
+    ]
+  },
+  "60_percent_review": {
+    "fictional_planning_assumptions": {
+      "monthly_claims": 1000,
+      "review_share": 0.6,
+      "handling_cad_per_hour": 45,
+      "build_maintenance_cad_per_hour": 60,
+      "hours_per_worker_month": 160
+    },
+    "options": [
+      {
+        "option": "Manual checklist",
+        "minutes_per_claim": 12,
+        "monthly_handling_hours": 200.0,
+        "claims_per_160h": 800,
+        "setup_cad": 0,
+        "annual_running_cad": 108000.0,
+        "first_year_cad": 108000.0
+      },
+      {
+        "option": "Shared spreadsheet",
+        "minutes_per_claim": 8,
+        "monthly_handling_hours": 133.33,
+        "claims_per_160h": 1200,
+        "setup_cad": 2400,
+        "annual_running_cad": 73560.0,
+        "first_year_cad": 75960.0
+      },
+      {
+        "option": "Rules-assisted intake",
+        "minutes_per_claim": 8.4,
+        "monthly_handling_hours": 140.0,
+        "claims_per_160h": 1143,
+        "setup_cad": 7200,
+        "annual_running_cad": 78780.0,
+        "first_year_cad": 85980.0
+      }
+    ]
+  },
+  "all_review": {
+    "fictional_planning_assumptions": {
+      "monthly_claims": 1000,
+      "review_share": 1,
+      "handling_cad_per_hour": 45,
+      "build_maintenance_cad_per_hour": 60,
+      "hours_per_worker_month": 160
+    },
+    "options": [
+      {
+        "option": "Manual checklist",
+        "minutes_per_claim": 12,
+        "monthly_handling_hours": 200.0,
+        "claims_per_160h": 800,
+        "setup_cad": 0,
+        "annual_running_cad": 108000.0,
+        "first_year_cad": 108000.0
+      },
+      {
+        "option": "Shared spreadsheet",
+        "minutes_per_claim": 8,
+        "monthly_handling_hours": 133.33,
+        "claims_per_160h": 1200,
+        "setup_cad": 2400,
+        "annual_running_cad": 73560.0,
+        "first_year_cad": 75960.0
+      },
+      {
+        "option": "Rules-assisted intake",
+        "minutes_per_claim": 12,
+        "monthly_handling_hours": 200.0,
+        "claims_per_160h": 800,
+        "setup_cad": 7200,
+        "annual_running_cad": 111180.0,
+        "first_year_cad": 118380.0
+      }
+    ]
+  }
+}
