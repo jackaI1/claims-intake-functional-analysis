@@ -1,0 +1,313 @@
+{
+  "status": "PASS",
+  "source_sha256": "febcaf8d7506b5117368192b93f118388f079b61a86d8c056ef797f8e7d2195e",
+  "test_methods_run": 22,
+  "requirements_passed": 15,
+  "requirements_total": 15,
+  "requirements": [
+    {
+      "id": "R01",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_cli_roundtrip",
+        "tests.test_intake.IntakeTests.test_complete_claim_routes_to_adjuster",
+        "tests.test_intake.IntakeTests.test_malformed_batch_is_rejected_before_any_write",
+        "tests.test_intake.IntakeTests.test_sample_batch_and_disk_reopen"
+      ]
+    },
+    {
+      "id": "R02",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_bad_field_types_are_reviewable",
+        "tests.test_intake.IntakeTests.test_every_required_business_field_can_be_missing"
+      ]
+    },
+    {
+      "id": "R03",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_policy_and_property_conflicts",
+        "tests.test_intake.IntakeTests.test_policy_boundaries_are_inclusive",
+        "tests.test_intake.IntakeTests.test_policy_snapshot_is_immutable_and_atomic"
+      ]
+    },
+    {
+      "id": "R04",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_dates_and_chronology",
+        "tests.test_intake.IntakeTests.test_policy_boundaries_are_inclusive"
+      ]
+    },
+    {
+      "id": "R05",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_amount_boundaries_and_loss_types",
+        "tests.test_intake.IntakeTests.test_bad_field_types_are_reviewable"
+      ]
+    },
+    {
+      "id": "R06",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_bad_field_types_are_reviewable",
+        "tests.test_intake.IntakeTests.test_each_loss_type_evidence"
+      ]
+    },
+    {
+      "id": "R07",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_identical_retry_is_idempotent_even_on_later_day",
+        "tests.test_intake.IntakeTests.test_two_connections_share_duplicate_protection"
+      ]
+    },
+    {
+      "id": "R08",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_conflicting_reference_preserves_both_versions",
+        "tests.test_intake.IntakeTests.test_duplicate_signal_and_distinct_claims",
+        "tests.test_intake.IntakeTests.test_two_connections_share_duplicate_protection"
+      ]
+    },
+    {
+      "id": "R09",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_complete_claim_routes_to_adjuster",
+        "tests.test_intake.IntakeTests.test_conflicting_reference_preserves_both_versions",
+        "tests.test_intake.IntakeTests.test_every_required_business_field_can_be_missing"
+      ]
+    },
+    {
+      "id": "R10",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_cli_roundtrip",
+        "tests.test_intake.IntakeTests.test_identical_retry_is_idempotent_even_on_later_day",
+        "tests.test_intake.IntakeTests.test_review_is_audited_and_removes_only_pending_item",
+        "tests.test_intake.IntakeTests.test_sample_batch_and_disk_reopen"
+      ]
+    },
+    {
+      "id": "R11",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_cli_roundtrip",
+        "tests.test_intake.IntakeTests.test_review_guards_and_each_action",
+        "tests.test_intake.IntakeTests.test_review_is_audited_and_removes_only_pending_item"
+      ]
+    },
+    {
+      "id": "R12",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_cli_roundtrip",
+        "tests.test_intake.IntakeTests.test_review_is_audited_and_removes_only_pending_item",
+        "tests.test_intake.IntakeTests.test_sample_batch_and_disk_reopen"
+      ]
+    },
+    {
+      "id": "R13",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_malformed_batch_is_rejected_before_any_write",
+        "tests.test_intake.IntakeTests.test_policy_snapshot_is_immutable_and_atomic",
+        "tests.test_intake.IntakeTests.test_storage_failure_rolls_back_claims_and_audit",
+        "tests.test_intake.IntakeTests.test_two_connections_share_duplicate_protection"
+      ]
+    },
+    {
+      "id": "R14",
+      "status": "PASS",
+      "tests": [
+        "tests.test_qa.ReportTests.test_all_linked_tests_must_pass",
+        "tests.test_qa.ReportTests.test_missing_failed_and_skipped_coverage_cannot_pass"
+      ]
+    },
+    {
+      "id": "R15",
+      "status": "PASS",
+      "tests": [
+        "tests.test_intake.IntakeTests.test_options_arithmetic_and_sensitivity"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "test": "tests.test_intake.IntakeTests.test_amount_boundaries_and_loss_types",
+      "status": "PASS",
+      "requirements": [
+        "R05"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_bad_field_types_are_reviewable",
+      "status": "PASS",
+      "requirements": [
+        "R02",
+        "R05",
+        "R06"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_cli_roundtrip",
+      "status": "PASS",
+      "requirements": [
+        "R01",
+        "R10",
+        "R11",
+        "R12"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_complete_claim_routes_to_adjuster",
+      "status": "PASS",
+      "requirements": [
+        "R01",
+        "R09"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_conflicting_reference_preserves_both_versions",
+      "status": "PASS",
+      "requirements": [
+        "R08",
+        "R09"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_dates_and_chronology",
+      "status": "PASS",
+      "requirements": [
+        "R04"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_duplicate_signal_and_distinct_claims",
+      "status": "PASS",
+      "requirements": [
+        "R08"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_each_loss_type_evidence",
+      "status": "PASS",
+      "requirements": [
+        "R06"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_every_required_business_field_can_be_missing",
+      "status": "PASS",
+      "requirements": [
+        "R02",
+        "R09"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_identical_retry_is_idempotent_even_on_later_day",
+      "status": "PASS",
+      "requirements": [
+        "R07",
+        "R10"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_malformed_batch_is_rejected_before_any_write",
+      "status": "PASS",
+      "requirements": [
+        "R01",
+        "R13"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_options_arithmetic_and_sensitivity",
+      "status": "PASS",
+      "requirements": [
+        "R15"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_policy_and_property_conflicts",
+      "status": "PASS",
+      "requirements": [
+        "R03"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_policy_boundaries_are_inclusive",
+      "status": "PASS",
+      "requirements": [
+        "R03",
+        "R04"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_policy_snapshot_is_immutable_and_atomic",
+      "status": "PASS",
+      "requirements": [
+        "R03",
+        "R13"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_review_guards_and_each_action",
+      "status": "PASS",
+      "requirements": [
+        "R11"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_review_is_audited_and_removes_only_pending_item",
+      "status": "PASS",
+      "requirements": [
+        "R10",
+        "R11",
+        "R12"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_sample_batch_and_disk_reopen",
+      "status": "PASS",
+      "requirements": [
+        "R01",
+        "R10",
+        "R12"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_storage_failure_rolls_back_claims_and_audit",
+      "status": "PASS",
+      "requirements": [
+        "R13"
+      ]
+    },
+    {
+      "test": "tests.test_intake.IntakeTests.test_two_connections_share_duplicate_protection",
+      "status": "PASS",
+      "requirements": [
+        "R07",
+        "R08",
+        "R13"
+      ]
+    },
+    {
+      "test": "tests.test_qa.ReportTests.test_all_linked_tests_must_pass",
+      "status": "PASS",
+      "requirements": [
+        "R14"
+      ]
+    },
+    {
+      "test": "tests.test_qa.ReportTests.test_missing_failed_and_skipped_coverage_cannot_pass",
+      "status": "PASS",
+      "requirements": [
+        "R14"
+      ]
+    }
+  ]
+}
